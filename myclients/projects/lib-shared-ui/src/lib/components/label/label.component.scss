@@ -1,0 +1,14 @@
+.label-container {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        font-size: 1.7rem;
+    }
+}

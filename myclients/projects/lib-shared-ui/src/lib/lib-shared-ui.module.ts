@@ -1,16 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { LibSharedUiComponent } from './lib-shared-ui.component';
-
-
+import { ComponentsList } from './components';
 
 @NgModule({
   declarations: [
-    LibSharedUiComponent
+    ...ComponentsList
   ],
   imports: [
+    CommonModule
   ],
   exports: [
-    LibSharedUiComponent
+    ...ComponentsList   // have to add it in exports so that it can be consumed outside this module
   ]
 })
 export class LibSharedUiModule { }

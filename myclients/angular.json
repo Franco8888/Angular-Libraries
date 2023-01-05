@@ -12,7 +12,7 @@
       },
       "root": "projects/app-web",
       "sourceRoot": "projects/app-web/src",
-      "prefix": "app",
+      "prefix": "web",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -109,7 +109,7 @@
       },
       "root": "projects/app-desktop",
       "sourceRoot": "projects/app-desktop/src",
-      "prefix": "app",
+      "prefix": "desktop",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -206,7 +206,7 @@
       "projectType": "library",
       "root": "projects/lib-shared",
       "sourceRoot": "projects/lib-shared/src",
-      "prefix": "lib",
+      "prefix": "shared",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -244,7 +244,7 @@
       "projectType": "library",
       "root": "projects/lib-shared-ui",
       "sourceRoot": "projects/lib-shared-ui/src",
-      "prefix": "lib",
+      "prefix": "shared-ui",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

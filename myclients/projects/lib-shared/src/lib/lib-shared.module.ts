@@ -1,16 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { LibSharedComponent } from './lib-shared.component';
-
-
+import { ComponentsList } from './components';
 
 @NgModule({
   declarations: [
-    LibSharedComponent
+    ...ComponentsList,  // Have to add our component to declarations
   ],
   imports: [
+    CommonModule
   ],
   exports: [
-    LibSharedComponent
+    ...ComponentsList,  // have to add it in exports so that it can be consumed outside this module
   ]
 })
 export class LibSharedModule { }

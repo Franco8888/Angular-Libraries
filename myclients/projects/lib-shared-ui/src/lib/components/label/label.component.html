@@ -1,0 +1,10 @@
+<div style="display: flex;">
+    <div class="label-container" [style.background-color]="backgroundColor">
+        <div class="icon-container">
+            <i [ngClass]="iconClassStr"></i>
+        </div>
+        <div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
