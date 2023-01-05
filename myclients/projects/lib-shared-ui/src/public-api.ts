@@ -7,3 +7,5 @@
 // export * from './lib/lib-shared.module';
 
 // Method - Use index.ts so organize each section then add each index.ts in here
+export * from './lib/components'
+export * from './lib/lib-shared-ui.module'

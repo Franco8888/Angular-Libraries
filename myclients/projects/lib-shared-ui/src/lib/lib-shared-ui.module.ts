@@ -7,10 +7,11 @@ import { ComponentsList } from './components';
     ...ComponentsList
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
-    ...ComponentsList   // have to add it in exports so that it can be consumed outside this module
+    ...ComponentsList,  // have to add it in exports so that it can be consumed outside this module
+    CommonModule
   ]
 })
 export class LibSharedUiModule { }

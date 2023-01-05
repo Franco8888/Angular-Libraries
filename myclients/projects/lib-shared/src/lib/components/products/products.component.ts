@@ -5,11 +5,13 @@ import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'shared-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
 
     prod: Product | null | undefined;
+    myBool = true;
+    myClass = 'myClass';
 
     constructor(private productService: ProductService) {
 

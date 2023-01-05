@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-ui-label',
+    selector: 'shared-ui-label',
     templateUrl: './label.component.html',
     styleUrls: ['./label.component.scss']
 })
