@@ -27,7 +27,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/app-web/src/favicon.ico",
-              "projects/app-web/src/assets"
+              "projects/app-web/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./projects/lib-shared/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "projects/app-web/src/styles.scss",

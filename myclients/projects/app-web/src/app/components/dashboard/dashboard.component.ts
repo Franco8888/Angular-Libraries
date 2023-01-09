@@ -14,9 +14,7 @@ export class DashboardComponent implements OnInit {
     // using service from library
     constructor(
         private productService: ProductService
-        ) {
-
-    }
+        ) { }
     ngOnInit() {
         this.myProduct = this.productService.getMyProduct();
     }
