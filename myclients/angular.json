@@ -30,7 +30,8 @@
               "projects/app-web/src/assets"
             ],
             "styles": [
-              "projects/app-web/src/styles.scss"
+              "projects/app-web/src/styles.scss",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -127,7 +128,8 @@
               "projects/app-desktop/src/assets"
             ],
             "styles": [
-              "projects/app-desktop/src/styles.scss"
+              "projects/app-desktop/src/styles.scss",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },

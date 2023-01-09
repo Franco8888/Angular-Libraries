@@ -1,6 +1,11 @@
 <p>dashboard works!</p>
 
+<div>
+    Icon
+</div>
 <shared-ui-icon icon="fa-address-book"></shared-ui-icon>
+
+<i class="fa fa fa-info" aria-hidden="true"></i>
 
 <shared-ui-button (clicked)="myFunc()">Press Me</shared-ui-button>
 
@@ -8,3 +13,13 @@
     Button has been pressend
 </div>
 
+<hr>
+<!-- Using a Component from library -->
+<div style="font-weight: bold;"> Using Component from library</div>
+<shared-products></shared-products>
+
+<hr>
+<!-- Using service and model from library to populate varaible and then use it -->
+<div style="font-weight: bold;">Getting Product from service:</div>
+<div>{{myProduct.name}}</div>
+<div>{{myProduct.description}}</div>

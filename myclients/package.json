@@ -6,7 +6,16 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+
+    "start-web": "run-p lib-shared:build lib-shared-ui:waiton web:start-waiton",
+    "lib-shared:build": "ng build lib-shared --watch",
+
+    "lib-shared-ui:waiton": "wait-on dist/lib-shared/package.json && npm run lib-shared-ui:build",
+    "lib-shared-ui:build": "ng build lib-shared-ui --watch",
+
+    "web:start-waiton": "wait-on dist/lib-shared-ui/package.json && wait-on dist/lib-shared/package.json && npm run web:start",
+    "web:start": "ng serve app-web"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +28,7 @@
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
     "font-awesome": "4.7.0",
+    "npm-run-all": "^4.1.5",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
