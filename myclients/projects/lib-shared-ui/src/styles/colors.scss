@@ -1,0 +1,56 @@
+// App Color Variables
+$primary: #28112b;
+$secondary: #453643;
+$accent: #788475;
+$white: #cddfd0;
+$dark: #1a1a1a;
+
+// sass list
+$app-colors: (
+    primary: $primary,
+    primary-light: lighten($primary, 10%),
+    primary-lighter: lighten($primary, 20%),
+    primary-dark: darken($primary, 10%),
+    primary-darker: darken($primary, 20%),
+    secondary: $secondary,
+    secondary-light: lighten($secondary, 10%),
+    secondary-lighter: lighten($secondary, 20%),
+    secondary-dark: darken($secondary, 10%),
+    secondary-darker: darken($secondary, 20%),
+    accent: $accent,
+    accent-light: lighten($accent, 10%),
+    accent-lighter: lighten($accent, 20%),
+    accent-dark: darken($accent, 10%),
+    accent-darker: darken($accent, 20%),
+    white: $white,
+    white-light: lighten($white, 10%),
+    white-lighter: lighten($white, 20%),
+    white-dark: darken($white, 10%),
+    white-darker: darken($white, 20%),
+    dark: $dark,
+    dark-light: lighten($dark, 10%),
+    dark-lighter: lighten($dark, 20%),
+    dark-dark: darken($dark, 10%),
+    dark-darker: darken($dark, 20%),
+);
+
+// function which given name will get color from the list
+@function app-color($name) {
+    @return map-get($app-colors, $name);
+}
+
+// Generating color classes
+@mixin app-generate-color-class($name, $prop, $color) {
+    .#{$name} {
+        #{$prop}: $color !important;
+    }
+}
+@mixin app-generate-color-classes($list, $prefix) {
+
+    @each $name, $color in $list {
+        @include app-generate-color-class(#{$prefix}#{$name}, color, $color);
+        @include app-generate-color-class(#{$prefix}bg-#{$name}, background-color, $color);
+    }
+}
+@include app-generate-color-classes($app-colors, app-color-);
+

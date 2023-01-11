@@ -1,0 +1,5 @@
+@import "../../../../../lib-shared-ui/src/styles/colors.scss";
+
+.my-color {
+    color: app-color(accent);
+}

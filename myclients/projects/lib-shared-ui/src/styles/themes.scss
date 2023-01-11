@@ -1,0 +1,29 @@
+@use 'sass:list';   // import list module of sass
+@import "./colors.scss";
+
+// Gradients
+
+$main-gradient: $secondary, $accent, $white; // Note: This is a complex variable with 3 items
+
+// Schemes/Themes
+$scheme-default: $primary, $white;
+$scheme-secondary: $accent, $primary;
+$scheme-accent-gradient: $dark, $main-gradient;
+
+@mixin color-scheme($text, $bg) {
+    @if list.length($bg) == 1 { // using our list module we call the lenght function on it
+        background-color: $bg;
+    } @else {
+        background-image: linear-gradient(to left top, $bg);
+    }
+    color: $text;
+}
+
+// Using themes
+.app-main-theme {
+    @include color-scheme($scheme-accent-gradient ...);    // since $scheme-default is a list we have to
+}
+
+.app-secondary-theme {
+    @include color-scheme($scheme-secondary ...);
+}
